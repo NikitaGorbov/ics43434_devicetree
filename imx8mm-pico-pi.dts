@@ -34,6 +34,19 @@
 	model = "TechNexion PICO-IMX8MM and PI baseboard";
 	compatible = "fsl,imx8mm-pico", "fsl,imx8mm";
 
+	ics43434: ics43434 {
+    	compatible = "invensense,ics43434";
+    	cpu-dai = <&sai3>;
+    	ssi-controller = <&sai3>;
+    	audio-codec = <&sound_record>;
+    	status = "okay";
+	};
+
+	sound_record: codec {
+	    #sound-dai-cells = <0>;
+	    compatible = "invensense,ics43434";
+	};
+
 	regulators {
 		compatible = "simple-bus";
 		#address-cells = <1>;
