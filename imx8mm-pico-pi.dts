@@ -186,6 +186,10 @@
 	};
 };
 
+&sai3 {
+	status = "okay";
+};
+
 &ecspi2 {
 	status = "okay";
 
