@@ -30,21 +30,42 @@
 		"", "", "", "", "", "", "", "";
 };
 
+&sai3 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_sai3>;
+	assigned-clocks = <&clk IMX8MM_CLK_SAI3>;
+	assigned-clock-parents = <&clk IMX8MM_AUDIO_PLL1_OUT>;
+	assigned-clock-rates = <24576000>;
+	status = "okay";
+};
+
+&sai2 {
+	status = "okay";
+};
+
 / {
 	model = "TechNexion PICO-IMX8MM and PI baseboard";
 	compatible = "fsl,imx8mm-pico", "fsl,imx8mm";
 
-	ics43434: ics43434 {
-    	compatible = "invensense,ics43434";
-    	cpu-dai = <&sai3>;
-    	ssi-controller = <&sai3>;
-    	audio-codec = <&sound_record>;
-    	status = "okay";
-	};
+    card_codec: card-codec {
+        #sound-dai-cells = <0>;
+        compatible = "invensense,ics43434";
+        status = "okay";
+    };
 
-	sound_record: codec {
-	    #sound-dai-cells = <0>;
-	    compatible = "invensense,ics43434";
+    sound {
+		compatible = "simple-audio-card";
+		simple-audio-card,format = "i2s";
+		simple-audio-card,name = "soundcard";
+		simple-audio-card,bitclock-master = <&dailink0_master>;
+		simple-audio-card,frame-master = <&dailink0_master>;
+		status = "okay";
+		simple-audio-card,cpu {
+			sound-dai = <&sai3>;
+		};
+		dailink0_master: simple-audio-card,codec {
+			sound-dai = <&card_codec>;
+		};
 	};
 
 	regulators {
@@ -186,10 +207,6 @@
 	};
 };
 
-&sai3 {
-	status = "okay";
-};
-
 &ecspi2 {
 	status = "okay";
 
@@ -233,6 +250,7 @@
 		};
 	};
 };
+
 
 &csi1_bridge {
 	fsl,mipi-mode;
