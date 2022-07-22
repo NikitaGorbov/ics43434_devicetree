@@ -1,0 +1,220 @@
+root@technexion:~# strace arecord -D hw:0,0 -d 2 -t wav -f S32_LE file.wav
+execve("/usr/bin/arecord", ["arecord", "-D", "hw:0,0", "-d", "2", "-t", "wav", "-f", "S32_LE", "file.wav"], 0xffffe4d986d8 /* 24 vars */) = 0
+brk(NULL)                               = 0xaaaadad91000
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=54998, ...}) = 0
+mmap(NULL, 54998, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd409000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libasound.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\240\232\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=981192, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffbd443000
+mmap(NULL, 1045160, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffbd309000
+mprotect(0xffffbd3f2000, 65536, PROT_NONE) = 0
+mmap(0xffffbd402000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe9000) = 0xffffbd402000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\300`\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=158008, ...}) = 0
+mmap(NULL, 193512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffbd2d9000
+mprotect(0xffffbd2f3000, 65536, PROT_NONE) = 0
+mmap(0xffffbd303000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0xffffbd303000
+mmap(0xffffbd305000, 13288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffbd305000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\250\16\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1450736, ...}) = 0
+mmap(NULL, 1519496, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffbd166000
+mprotect(0xffffbd2c0000, 65536, PROT_NONE) = 0
+mmap(0xffffbd2d0000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15a000) = 0xffffbd2d0000
+mmap(0xffffbd2d6000, 12168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffbd2d6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\272\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=629704, ...}) = 0
+mmap(NULL, 692344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffbd0bc000
+mprotect(0xffffbd154000, 65536, PROT_NONE) = 0
+mmap(0xffffbd164000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x98000) = 0xffffbd164000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0P\17\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14528, ...}) = 0
+mmap(NULL, 78080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffbd0a8000
+mprotect(0xffffbd0ab000, 61440, PROT_NONE) = 0
+mmap(0xffffbd0ba000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0xffffbd0ba000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffbd441000
+mprotect(0xffffbd2d0000, 16384, PROT_READ) = 0
+mprotect(0xffffbd0ba000, 4096, PROT_READ) = 0
+mprotect(0xffffbd164000, 4096, PROT_READ) = 0
+mprotect(0xffffbd303000, 4096, PROT_READ) = 0
+mprotect(0xffffbd402000, 24576, PROT_READ) = 0
+mprotect(0xaaaac9f91000, 4096, PROT_READ) = 0
+mprotect(0xffffbd448000, 4096, PROT_READ) = 0
+munmap(0xffffbd409000, 54998)           = 0
+set_tid_address(0xffffbd4418f0)         = 743
+set_robust_list(0xffffbd441900, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0xffffbd2deb48, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0xffffbd2dec08, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0xaaaadad91000
+brk(0xaaaadadb2000)                     = 0xaaaadadb2000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=252, ...}) = 0
+mmap(NULL, 252, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd440000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/aarch64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=27004, ...}) = 0
+mmap(NULL, 27004, PROT_READ, MAP_SHARED, 3, 0) = 0xffffbd439000
+close(3)                                = 0
+futex(0xffffbd2d57f4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd438000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd416000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=131, ...}) = 0
+mmap(NULL, 131, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd415000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd414000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd413000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd412000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd411000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1518110, ...}) = 0
+mmap(NULL, 1518110, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbcf35000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd410000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd40f000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=201272, ...}) = 0
+mmap(NULL, 201272, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbcf03000
+close(3)                                = 0
+ioctl(1, TCGETS, {B115200 opost isig icanon echo ...}) = 0
+futex(0xffffbd408118, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+newfstatat(AT_FDCWD, "/usr/share/alsa/alsa.conf", {st_mode=S_IFREG|0644, st_size=9623, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/alsa/alsa.conf", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=9623, ...}) = 0
+read(3, "#\n#  ALSA library configuration "..., 4096) = 4096
+read(3, "nded\n\t\t}\n\t\tdescription \"Direct h"..., 4096) = 4096
+read(3, "@func refer\n\t\t\t\tname defaults.hw"..., 4096) = 1431
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+futex(0xffffbd0bb0e8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+faccessat(AT_FDCWD, "/etc/alsa/conf.d", R_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/etc/asound.conf", R_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/root/.asoundrc", R_OK) = 0
+newfstatat(AT_FDCWD, "/root/.asoundrc", {st_mode=S_IFREG|0644, st_size=97, ...}, 0) = 0
+openat(AT_FDCWD, "/root/.asoundrc", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=97, ...}) = 0
+read(3, "pcm.!default {\n  type plug\n  sla"..., 4096) = 97
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/dev/snd/controlC0", O_RDONLY|O_CLOEXEC) = 3
+ioctl(3, SNDRV_CTL_IOCTL_CARD_INFO, 0xffffffc83780) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/dev/snd/controlC0", O_RDWR|O_CLOEXEC) = 3
+ioctl(3, SNDRV_CTL_IOCTL_PVERSION, 0xffffffc8393c) = 0
+ioctl(3, SNDRV_CTL_IOCTL_PCM_PREFER_SUBDEVICE, 0xffffffc8396c) = 0
+openat(AT_FDCWD, "/dev/snd/pcmC0D0c", O_RDWR|O_NONBLOCK|O_CLOEXEC) = 4
+close(3)                                = 0
+ioctl(4, SNDRV_PCM_IOCTL_INFO, 0xffffffc83848) = 0
+fcntl(4, F_GETFL)                       = 0x20802 (flags O_RDWR|O_NONBLOCK|O_LARGEFILE)
+ioctl(4, SNDRV_PCM_IOCTL_PVERSION, 0xffffffc83828) = 0
+ioctl(4, SNDRV_PCM_IOCTL_USER_PVERSION, 0xffffffc83838) = 0
+ioctl(4, SNDRV_PCM_IOCTL_TTSTAMP, 0xffffffc8382c) = 0
+mmap(NULL, 4096, PROT_READ, MAP_SHARED, 4, 0x80000000) = -1 ENXIO (No such device or address)
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0x81000000) = -1 ENXIO (No such device or address)
+ioctl(4, SNDRV_PCM_IOCTL_SYNC_PTR, 0xaaaadad96080) = 0
+fcntl(4, F_GETFL)                       = 0x20802 (flags O_RDWR|O_NONBLOCK|O_LARGEFILE)
+fcntl(4, F_SETFL, O_RDWR|O_LARGEFILE)   = 0
+ioctl(4, SNDRV_PCM_IOCTL_INFO, 0xffffffc83dd0) = 0
+rt_sigaction(SIGINT, {sa_handler=0xaaaac9f78ca8, sa_mask=[INT], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0xaaaac9f78ca8, sa_mask=[TERM], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGABRT, {sa_handler=0xaaaac9f78ca8, sa_mask=[ABRT], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR1, {sa_handler=0xaaaac9f757e0, sa_mask=[USR1], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+openat(AT_FDCWD, "/usr/share/locale/C.UTF-8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/C.utf8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/C/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/C.UTF-8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/C.utf8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/C/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(2, "Recording WAVE 'file.wav' : ", 28Recording WAVE 'file.wav' : ) = 28
+write(2, "Signed 32 bit Little Endian, ", 29Signed 32 bit Little Endian, ) = 29
+write(2, "Rate 8000 Hz, ", 14Rate 8000 Hz, )          = 14
+write(2, "Mono", 4Mono)                     = 4
+write(2, "\n", 1
+)                       = 1
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_REFINE, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_PARAMS, 0xffffffc81890) = 0
+ioctl(4, SNDRV_PCM_IOCTL_SYNC_PTR, 0xaaaadad96080) = 0
+ioctl(4, SNDRV_PCM_IOCTL_SW_PARAMS, 0xffffffc81740) = 0
+ioctl(4, SNDRV_PCM_IOCTL_PREPARE, 0x9cc805255eadf400) = 0
+ioctl(4, SNDRV_PCM_IOCTL_SYNC_PTR, 0xaaaadad96080) = 0
+ioctl(4, SNDRV_PCM_IOCTL_SYNC_PTR, 0xaaaadad96080) = 0
+newfstatat(AT_FDCWD, "file.wav", {st_mode=S_IFREG|0644, st_size=44, ...}, AT_SYMLINK_NOFOLLOW) = 0
+unlinkat(AT_FDCWD, "file.wav", 0)       = 0
+openat(AT_FDCWD, "file.wav", O_WRONLY|O_CREAT, 0644) = 3
+write(3, "RIFF$\372\0\0WAVE", 12)       = 12
+write(3, "fmt \20\0\0\0", 8)            = 8
+write(3, "\1\0\1\0@\37\0\0\0}\0\0\4\0 \0", 16) = 16
+write(3, "data\0\372\0\0", 8)           = 8
+ioctl(4, SNDRV_PCM_IOCTL_READI_FRAMES, 0xffffffc81c80) = -1 EIO (Input/output error)
+write(2, "arecord: pcm_read:2153: ", 24arecord: pcm_read:2153: ) = 24
+openat(AT_FDCWD, "/usr/share/locale/C.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/C.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/C/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/C.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/C.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/C/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(2, "read error: Input/output error", 30read error: Input/output error) = 30
+write(2, "\n", 1
+)                       = 1
+ioctl(4, SNDRV_PCM_IOCTL_DROP, 0)       = 0
+ioctl(4, SNDRV_PCM_IOCTL_HW_FREE, 0)    = 0
+close(4)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
