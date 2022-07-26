@@ -39,17 +39,14 @@
 	status = "okay";
 };
 
-&sai2 {
-	status = "okay";
-};
-
 / {
 	model = "TechNexion PICO-IMX8MM and PI baseboard";
 	compatible = "fsl,imx8mm-pico", "fsl,imx8mm";
 
     card_codec: card-codec {
         #sound-dai-cells = <0>;
-        compatible = "invensense,ics43434";
+        compatible = "invensense,ics43432";
+        /* clocks = <&clk IMX8MM_CLK_SAI3_ROOT>; */
         status = "okay";
     };
 
@@ -59,12 +56,15 @@
 		simple-audio-card,name = "soundcard";
 		simple-audio-card,bitclock-master = <&dailink0_master>;
 		simple-audio-card,frame-master = <&dailink0_master>;
+		ssi-controller = <&sai3>;
 		status = "okay";
-		simple-audio-card,cpu {
-			sound-dai = <&sai3>;
-		};
-		dailink0_master: simple-audio-card,codec {
+		simple-audio-card,codec {
 			sound-dai = <&card_codec>;
+		};
+		dailink0_master: simple-audio-card,cpu {
+			sound-dai = <&sai3>;
+			/* testing */
+        	system-clock-frequency = <3222400>;
 		};
 	};
 
